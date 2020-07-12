@@ -1,0 +1,5 @@
+const path = require('path')
+// const pathObj = path.parse(__filename)
+// console.log(pathObj)
+const pathObj = path.normalize('/foo/bar//baz/asdf/quux/../../')
+console.log(pathObj)

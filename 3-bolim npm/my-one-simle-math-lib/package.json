@@ -1,0 +1,15 @@
+{
+  "name": "my-simple-one-math-lib",
+  "version": "1.1.0",
+  "description": "g'o'zal bu hayot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "qoshu",
+    "ayruv"
+  ],
+  "author": "Islom Umar",
+  "license": "ISC"
+}
