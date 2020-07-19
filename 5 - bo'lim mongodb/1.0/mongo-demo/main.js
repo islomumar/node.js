@@ -28,9 +28,15 @@ async function getInventory() {
         .sort({ item: 1 })
         .select({ item: 1, qty: 1, _id: 0 })
 }
-
+async function getInventory2() {
+    return await Inventory
+        .find()
+        .or([{ qty: { $lte: 50 } }, { item: /.*l.*/i }])
+        .sort({ qty: 1 })
+        .select({ item: 1, qty: 1, _id: 0 })
+}
 async function run() {
-    const item = await getInventory()
+    const item = await getInventory2()
 
     console.log(item)
 }
