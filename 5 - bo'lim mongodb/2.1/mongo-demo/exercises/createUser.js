@@ -40,6 +40,8 @@ async function createBook(title, authorId) {
 async function listBook() {
     const book = await Book
         .find()
+        // bunda populate bu boshqa bir objectni narsalarni olish uchun kerak bo'layapti 
+        // shunga shunni ishlatayapti
         .populate('author', 'firstName -_id')
         .select('author title')
     console.log(book)
